@@ -10,5 +10,8 @@
     "name": "Joshua Daniel D",
     "email": "natechnologies2007@gmail.com",
     "url": "https://twitter.com/CoderDJD"
+  },
+  "dependencies": {
+    "morgan": "^1.10.0"
   }
 }
