@@ -15,9 +15,9 @@ module.exports = {
       white: "#f5f5f5",
       transparent: "transparent",
       accent: {
-        default: "#F59E0B",
-        hover: "#FCD34D",
-        disabled: "#FBBF24",
+        default: "#6366F1",
+        hover: "#A78BFA",
+        disabled: "#C4B5FD",
       },
       dark: {
         100: "#91a3b0",

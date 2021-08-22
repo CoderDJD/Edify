@@ -1,5 +1,11 @@
 {
-  "name": "hoot",
+  "name": "edify",
+  "workspaces": {
+    "packages": [
+      "client",
+      "server"
+    ]
+  },
   "author": {
     "name": "Joshua Daniel D",
     "email": "natechnologies2007@gmail.com",

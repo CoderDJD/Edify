@@ -18,31 +18,35 @@ export default function RequestUnit({
           </a>
           <TextUnit
             icon={<Award />}
-            text={`Class : ${student.class}`}
-            color="blue-400"
+            text={`Class / Degree : ${student.class}`}
+            color="indigo-500"
           />
           <TextUnit
             icon={<Percent />}
-            text={`Perf : ${student.percentage}%`}
+            text={`Percentage : ${student.percentage}%`}
             color="green-500"
           />
-          <TextUnit icon={<Mail />} text={`${student.email}`} color="red-500" />
           <TextUnit
             icon={<Phone />}
-            text={`Call : ${student.phoneNum}`}
-            color="accent-disabled"
+            text={`Student P. Number : ${student.phoneNum}`}
+            color="green-500"
+          />
+          <TextUnit
+            icon={<Mail />}
+            text={`${student.email}`}
+            color="blue-500"
           />
           <TextUnit
             icon={<Book />}
-            text={`School : ${school.name}`}
+            text={`Institute : ${school.name}`}
             color="pink-500"
           />
-          <TextUnit icon={<Mail />} text={`${school.email}`} color="blue-500" />
           <TextUnit
             icon={<Phone />}
-            text={`Call : ${school.phoneNum}`}
-            color="indigo-500"
+            text={`Institute P. Number : ${school.phoneNum}`}
+            color="green-500"
           />
+          <TextUnit icon={<Mail />} text={`${school.email}`} color="blue-500" />
         </section>
       </section>
     </div>
@@ -67,7 +71,7 @@ RequestUnit.propTypes = {
 RequestUnit.defaultProps = {
   student: {
     name: "D Joshua Daniel",
-    class: "8 C",
+    class: "8",
     percentage: "98",
     email: "joshua@gmail.com",
     phoneNum: "6000000000",

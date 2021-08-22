@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Plus } from "react-feather";
 import Button from "../../components/Button";
+import { DollarSign, Plus } from "react-feather";
 import RequestUnit from "../../components/RequestUnit";
 
 export default function Main() {
@@ -13,12 +13,19 @@ export default function Main() {
             style={{ top: "0px" }}
           >
             <div className="flex justify-between items-center mb-5">
-              <h2>Requests for you</h2>
-              <Button>
-                <article className="flex items-center justify-center gap-2">
-                  <Plus className="w-auto h-4" />
-                  <span className="text-sm">Request</span>
-                </article>
+              <article className="flex space-x-2 items-center justify-center">
+                <DollarSign className="text-pink-500" />
+                <h3>All Requests</h3>
+              </article>
+              <Button
+                clickHandler={() => {
+                  location.replace("/create");
+                }}
+              >
+                <div className="flex items-center justify-center space-x-1">
+                  <Plus className="text-white" />
+                  <h4 className="text-white">Request</h4>
+                </div>
               </Button>
             </div>
           </div>
