@@ -1,8 +1,8 @@
-import * as React from "react";
+import React from "react";
 import TextUnit from "./TextUnit";
 import PropTypes, { InferProps } from "prop-types";
 import { Mail, Book, Phone, Award, Percent } from "react-feather";
-
+import { Modal } from "@material-ui/core";
 export default function RequestUnit({
   student,
   school,
@@ -11,11 +11,9 @@ export default function RequestUnit({
     <div className="flex flex-col w-full p-4 rounded-lg transition duration-200 ease-in-out bg-dark-500 hover:bg-dark-300 hover:shadow-lg">
       <section className="flex space-x-2 items-center">
         <section className="flex flex-col gap-1">
-          <a href={`mailto:${student.email}`} target="_top">
-            <h3 className="cursor-pointer hover:text-accent-hover">
-              {student.name}
-            </h3>
-          </a>
+          <h3 className="cursor-pointer hover:text-accent-hover">
+            {student.name}
+          </h3>
           <TextUnit
             icon={<Award />}
             text={`Class / Degree : ${student.class}`}

@@ -10,7 +10,7 @@ export default function TextUnit({
   return (
     <article className={`flex gap-2 items-center text-${color}`}>
       {icon}
-      <h4 className={`font-base text-${color} overflow-auto`}>{text}</h4>
+      <h4 className={`text-base text-${color} overflow-scroll`}>{text}</h4>
     </article>
   );
 }
