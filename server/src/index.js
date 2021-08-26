@@ -1,12 +1,11 @@
-import dotenv from "dotenv";
-dotenv.config();
-import Joi from "joi";
-import monk from "monk";
-import cors from "cors";
-import helmet from "helmet";
-import express from "express";
-import Filter from "bad-words";
-import rateLimit from "express-rate-limit";
+require("dotenv").config();
+const Joi = require("joi");
+const monk = require("monk");
+const cors = require("cors");
+const helmet = require("helmet");
+const express = require("express");
+const Filter = require("bad-words");
+const rateLimit = require("express-rate-limit");
 
 const app = express(),
   customJoi = Joi.extend(require("joi-phone-number")),
@@ -14,12 +13,24 @@ const app = express(),
   reqs = db.get("reqs"),
   filter = new Filter(),
   schema = Joi.object({
-    name: customJoi.string().required().min(3).max(30),
-    grade: customJoi.string().required().max(30),
+    name: customJoi
+      .string()
+      .required()
+      .min(3)
+      .max(30)
+      .regex(/^[a-zA-Z0-9 ]*$/),
+    grade: customJoi
+      .string()
+      .required()
+      .max(30)
+      .regex(/^[a-zA-Z0-9 ]*$/),
     perc: customJoi.string().alphanum().required().max(10),
     mail: customJoi.string().email().required(),
     phone: customJoi.string().phoneNumber().required(),
-    school: customJoi.string().required(),
+    school: customJoi
+      .string()
+      .required()
+      .regex(/^[a-zA-Z0-9 ]*$/),
     smail: customJoi.string().email().required(),
     sphone: customJoi.string().phoneNumber().required(),
   });
