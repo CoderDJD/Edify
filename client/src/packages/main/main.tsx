@@ -54,16 +54,6 @@ export default function Main() {
                 <DollarSign className="text-pink-500" />
                 <h3>All Requests</h3>
               </article>
-              <Button
-                clickHandler={() => {
-                  location.replace("/create");
-                }}
-              >
-                <div className="flex items-center justify-center space-x-1">
-                  <Plus className="text-white" />
-                  <h4 className="text-white">Request</h4>
-                </div>
-              </Button>
             </div>
           </div>
           <div>
