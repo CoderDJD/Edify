@@ -4,7 +4,7 @@ import Create from "../assets/create";
 import NavigationUnit from "../components/NavigationUnit";
 
 const tabs = [
-  { route: "/", icon: <Home /> },
+  { route: "/feed/", icon: <Home /> },
   { route: "/create/", icon: <Create /> },
 ];
 
