@@ -4,6 +4,7 @@ import { DollarSign, Plus } from "react-feather";
 import RequestUnit from "../../components/RequestUnit";
 import useApi from "../../util/useApi";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 export default function Main() {
   const [reqs, setReqs] = useState([]);
@@ -39,9 +40,9 @@ export default function Main() {
                 <p className="text-accent-default font-bold font-body">
                   This site is created to help people who need economical
                   support for their studies 📗. Please request{" "}
-                  <a href="/create">
+                  <Link to="/create">
                     <span className="text-accent-hover">here</span>
-                  </a>{" "}
+                  </Link>{" "}
                   if you know someone who needs help, or if you want to
                   contribute, verify the details given on this page and then
                   fund them according to your will. Your help towards a better
