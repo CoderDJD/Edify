@@ -9,8 +9,10 @@ export default function App() {
     <Suspense fallback={<div className="bg-dark-400 w-screen h-screen"></div>}>
       <div className="bg-dark-400 w-screen h-screen">
         <BrowserRouter>
-          <Route component={Create} path="/create" />
-          <Route component={Main} path="/" />
+          <Switch>
+            <Route component={Create} path="/create" />
+            <Route component={Main} path="/" />
+          </Switch>
           <Navigator />
         </BrowserRouter>
       </div>
