@@ -5,10 +5,10 @@ import React, { StrictMode } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
 hydrate(
-  <Router>
-    <StrictMode>
+  <StrictMode>
+    <Router>
       <App />
-    </StrictMode>
-  </Router>,
+    </Router>
+  </StrictMode>,
   document.querySelector("#root")
 );

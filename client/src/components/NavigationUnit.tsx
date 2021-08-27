@@ -6,10 +6,11 @@ import PropTypes, { InferProps } from "prop-types";
 export default function NavigationUnit({
   routeStr,
   Icon,
+  route,
 }: InferProps<typeof NavigationUnit.propTypes>) {
   const history = useHistory();
   return (
-    <div className="flex cursor-pointer">
+    <div className="flex flex-col cursor-pointer items-center justify-center p-2">
       <button
         className="focus:outline-none focus:ring"
         onClick={() => {
@@ -18,6 +19,7 @@ export default function NavigationUnit({
       >
         {Icon}
       </button>
+      <h3 className="text-sm">{route}</h3>
     </div>
   );
 }
@@ -25,6 +27,7 @@ export default function NavigationUnit({
 NavigationUnit.propTypes = {
   routeStr: PropTypes.string.isRequired,
   Icon: PropTypes.node.isRequired,
+  route: PropTypes.string.isRequired,
 };
 
 NavigationUnit.defaultProps = {
