@@ -44,7 +44,7 @@ export default function Main() {
                   due to COVID 19. As a token of respect, please make sure the
                   data you enter is legit and please don't spam. Thank you. 🙏
                 </p>
-                <p className="text-sm text-accent-disabled">
+                <p className="text-sm text-accent-disabled font-body">
                   By continuing to use the site, you agree to our{" "}
                   <a href="https://www.privacypolicies.com/live/90c29bd8-3889-44ed-a1b3-8a0dd98754e7">
                     <span className="text-accent-default">privacy policy</span>
@@ -53,6 +53,13 @@ export default function Main() {
                   publicly. You are requested to verify the legitimacy of the
                   donor before accepting money.
                 </p>
+                <Button
+                  clickHandler={() => {
+                    setOpen(false);
+                  }}
+                >
+                  Close
+                </Button>
               </div>
             </Fade>
           </Modal>

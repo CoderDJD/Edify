@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
 import Button from "../../components/Button";
+import React, { useState, useEffect } from "react";
 import { DollarSign, Plus } from "react-feather";
 import RequestUnit from "../../components/RequestUnit";
 import useApi from "../../util/useApi";
@@ -31,20 +31,35 @@ export default function Main() {
             BackdropProps={{
               timeout: 500,
             }}
-            className="flex items-center justify-center justify-items-center"
+            className="flex items-center justify-center"
           >
             <Fade in={open}>
-              <div className="bg-dark-500 rounded-md p-3 w-9/12 h-max space-y-2 flex flex-col items-center justify-center outline-none">
-                <h1>Please note 📚</h1>
+              <div className="bg-dark-500 rounded-md p-3 w-9/12 h-max space-y-2 flex flex-col items-center justify-center outline-none overflow-auto scrollbar-thin scrollbar-rounded-md scrollbar-thumb-accent-default">
+                <h1>Welcome 🙏</h1>
                 <p className="text-accent-default font-bold font-body">
-                  Please check the actual identity of the person requesting
-                  before sharing money with them. This is just a platform to
-                  connect people, and data could be real or false. Again, please
-                  verify the identity before giving money.{" "}
+                  This site is created to help people who need economical
+                  support for their studies 📗. Please request{" "}
+                  <a href="/create">
+                    <span className="text-accent-hover">here</span>
+                  </a>{" "}
+                  if you know someone who needs help, or if you want to
+                  contribute, verify the details given on this page and then
+                  fund them according to your will. Your help towards a better
+                  world is 👏. Please check the actual identity of the person
+                  requesting before sharing money with them. This is just a
+                  platform to connect people, and data could be real or false.
                 </p>
+                <Button
+                  clickHandler={() => {
+                    setOpen(false);
+                  }}
+                >
+                  Close
+                </Button>
               </div>
             </Fade>
           </Modal>
+
           <div
             className="sticky w-full z-10 bg-dark-400 pt-5 mr-4"
             style={{ top: "0px" }}
