@@ -10,8 +10,8 @@ export default function App() {
       <div className="bg-dark-400 w-screen h-screen">
         <BrowserRouter>
           <Switch>
-            <Route component={Create} path="/create" />
             <Route component={Main} path="/" />
+            <Route component={Create} path="/create" />
           </Switch>
           <Navigator />
         </BrowserRouter>
