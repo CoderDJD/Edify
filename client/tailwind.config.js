@@ -12,7 +12,7 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
-      white: "#f5f5f5",
+      white: "#f8f8f8",
       transparent: "transparent",
       accent: {
         default: "#6366F1",

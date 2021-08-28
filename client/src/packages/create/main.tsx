@@ -38,7 +38,7 @@ export default function Main() {
             <Fade in={open}>
               <div className="bg-dark-500 rounded-md p-3 w-9/12 h-max space-y-2 flex flex-col items-center justify-center outline-none">
                 <h1>Please note 📚</h1>
-                <p className="text-accent-default font-bold font-body">
+                <p className="text-white font-bold font-body">
                   This is a platform to connect people who require economic help
                   with their studies. Many families have lost their livelihoods
                   due to COVID 19. As a token of respect, please make sure the

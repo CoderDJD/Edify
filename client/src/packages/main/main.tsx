@@ -37,7 +37,7 @@ export default function Main() {
             <Fade in={open}>
               <div className="bg-dark-500 rounded-md p-3 w-9/12 h-max space-y-2 flex flex-col items-center justify-center outline-none overflow-auto scrollbar-thin scrollbar-rounded-md scrollbar-thumb-accent-default">
                 <h1>Welcome 🙏</h1>
-                <p className="text-accent-default font-bold font-body">
+                <p className="text-white font-bold font-body">
                   This site is created to help people who need economical
                   support for their studies 📗. Please request{" "}
                   <Link to="/create">
